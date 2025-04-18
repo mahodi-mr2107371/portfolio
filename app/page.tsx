@@ -186,7 +186,7 @@ const PortfolioWebsite = () => {
   const { darkMode, toggleDarkMode } = useContext(ThemeContext);
   const { scrollY } = useScroll();
 
-  const aboutRef = useRef<HTMLElement>(null);
+  const aboutRef = useRef<HTMLElement | null>(null);
   const experienceRef = useRef<HTMLElement>(null);
   const educationRef = useRef<HTMLElement>(null);
   const skillsRef = useRef<HTMLElement>(null);
@@ -418,7 +418,11 @@ const PortfolioWebsite = () => {
                 ].map((item) => (
                   <motion.button
                     key={item.id}
-                    onClick={() => item.ref && scrollToSection(item.ref)}
+                    onClick={() => {
+                      if (item.ref?.current) {
+                        scrollToSection(item.ref);
+                      }
+                    }}
                     className={`block w-full text-left py-3 ${activeSection === item.id
                       ? `${darkMode ? 'text-blue-400' : 'text-blue-600'} font-medium`
                       : `${darkMode ? 'text-gray-300' : 'text-gray-600'}`}`}
