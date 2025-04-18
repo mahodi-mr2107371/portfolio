@@ -281,7 +281,6 @@ const PortfolioWebsite = () => {
   };
 
   const handleDownloadCV = () => {
-    // In a real application, you would have a real CV file
     const link = document.createElement('a');
     link.href = '/mahodicv.pdf'; // This path is relative to the public folder
     link.download = 'mahodi_resume.pdf';
