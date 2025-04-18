@@ -347,7 +347,7 @@ const PortfolioWebsite = () => {
               ].map((item, index) => (
                 <motion.button
                   key={item.id}
-                  onClick={() => scrollToSection(item.ref)}
+                  onClick={() => item.ref && scrollToSection(item.ref)}
                   className={`relative ${activeSection === item.id
                     ? `${darkMode ? 'text-blue-400' : 'text-blue-600'} font-medium`
                     : `${darkMode ? 'text-gray-300 hover:text-blue-400' : 'text-gray-600 hover:text-blue-500'}`} 
@@ -409,7 +409,7 @@ const PortfolioWebsite = () => {
                 ].map((item) => (
                   <motion.button
                     key={item.id}
-                    onClick={() => scrollToSection(item.ref)}
+                    onClick={() => item.ref && scrollToSection(item.ref)}
                     className={`block w-full text-left py-3 ${activeSection === item.id
                       ? `${darkMode ? 'text-blue-400' : 'text-blue-600'} font-medium`
                       : `${darkMode ? 'text-gray-300' : 'text-gray-600'}`}`}
