@@ -288,8 +288,12 @@ const PortfolioWebsite = () => {
     link.click();
   };
 
-  const scrollToSection = (sectionRef: React.RefObject<HTMLElement>) => {
-    sectionRef.current?.scrollIntoView({ behavior: 'smooth' });
+  // const scrollToSection = (sectionRef: React.RefObject<HTMLElement>) => {
+  //   sectionRef.current?.scrollIntoView({ behavior: 'smooth' });
+  //   setMobileMenuOpen(false);
+  // };
+  const scrollToSection = (ref: React.RefObject<HTMLElement | null>) => {
+    ref.current?.scrollIntoView({ behavior: 'smooth' });
     setMobileMenuOpen(false);
   };
 
@@ -345,9 +349,14 @@ const PortfolioWebsite = () => {
                 { name: 'Projects', ref: projectsRef, id: 'projects' },
                 { name: 'Contact', ref: contactRef, id: 'contact' }
               ].map((item, index) => (
+
                 <motion.button
                   key={item.id}
-                  onClick={() => item.ref && scrollToSection(item.ref)}
+                  onClick={() => {
+                    if (item.ref?.current) {
+                      scrollToSection(item.ref);
+                    }
+                  }}
                   className={`relative ${activeSection === item.id
                     ? `${darkMode ? 'text-blue-400' : 'text-blue-600'} font-medium`
                     : `${darkMode ? 'text-gray-300 hover:text-blue-400' : 'text-gray-600 hover:text-blue-500'}`} 
