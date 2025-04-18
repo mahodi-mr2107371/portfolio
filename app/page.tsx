@@ -796,7 +796,7 @@ const PortfolioWebsite = () => {
                     className={`h-48 ${darkMode ? 'bg-gray-700' : 'bg-gray-200'} flex items-center justify-center overflow-hidden transition-colors duration-500 relative`}
                   >
                     <div className={`text-${darkMode ? 'gray-400' : 'gray-500'} text-lg transition-colors duration-500`}>
-                      Project Image
+                      <img src={project.image} />
                     </div>
                     <motion.div
                       className="absolute inset-0 bg-blue-600 bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
