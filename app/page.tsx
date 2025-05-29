@@ -163,6 +163,14 @@ const projects: Project[] = [
     technologies: ["LogiSim", "Assembly"],
     image: "/project6.jpg",
     link: "https://github.com/mahodi-mr2107371/Projects/tree/dd10c85435957184bf1a0ded29a8363d8e309208/Custom_CPU"
+  },
+  {
+    id: 7,
+    title: "Data Science Project",
+    description: "This project covers the full data science pipeline—from preprocessing and analysis to model building and evaluation. Using real-world data, it uncovers patterns showcasing best practices in data cleaning, feature engineering, and visualization",
+    technologies: ["Python", "pandas", "NumPy", "scikit - learn", "Matplotlib", "Seaborn", "Jupyter Notebook"],
+    image: "/project7.jpg",
+    link: "https://github.com/mahodi-mr2107371/Projects/tree/main/data-sci-project-master"
   }
 ];
 
@@ -225,7 +233,7 @@ const PortfolioWebsite = () => {
           y: mousePosition.y - 16,
           opacity: cursorVisible ? 1 : 0,
         }}
-        transition={{ type: "spring", damping: 30, stiffness: 200 }}
+        transition={{ type: "spring", damping: 40, stiffness: 200 }}
       >
         <div className="w-8 h-8 bg-blue-500 rounded-full opacity-20 blur-sm" />
       </motion.div>
@@ -576,7 +584,7 @@ const PortfolioWebsite = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`${darkMode ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-800 hover:bg-gray-700'} text-white p-3 rounded-full transition-all duration-300`}
-                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                   >
                     <FaGithub className="text-xl" />
@@ -586,7 +594,7 @@ const PortfolioWebsite = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full transition-all duration-300"
-                    whileHover={{ scale: 1.1, rotate: -5 }}
+                    whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                   >
                     <FaLinkedin className="text-xl" />
