@@ -142,7 +142,7 @@ const projects: Project[] = [
   },
   {
     id: 4,
-    title: "Machine Leaning",
+    title: "Machine Learning",
     description: "Using python, Built mutiple machine learning models capable of analyzing, predicting, and plotting graphs.",
     technologies: ["Python", "Pytorch", "Panda"],
     image: "/project4.jpg",
