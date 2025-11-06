@@ -95,6 +95,20 @@ const experiences: Experience[] = [
     company: "QAFCO",
     duration: "May 2024 - July 2024",
     description: "IT inter at QAFCO IT operations department where I acquired hands on experience on Network infrastructure operations, Network Security and Security Protocols, Azure Cloud Service management."
+  },
+  {
+    id: 3,
+    title: "Full Stack Crossplatform Mobile Application Developer",
+    company: "Makira",
+    duration: "June 2025 - Ongoing",
+    description: "Designed and build scalable crossplatform mobile application on flutter with supabase backend storage and authentication services. Collaborated with design team to implement UI/UX improvements, and with development team to integrate the services and application with their company's applications."
+  },
+  {
+    id: 4,
+    title: "Full Stack Web Developer",
+    company: "Buthur",
+    duration: "August 2025 - Ongoing",
+    description: "Designed and Implemented Multiple responsive web applications using Next Js framework with database integration with AWS S3 bucket and FastaApi for the backend. Used Docker for smooth local development between team members. Worked closely with design team to implement modern UI/UX designs and with development team to integrate the web applications with their company's services and applications."
   }
 ];
 
